@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -13,13 +15,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(
-  "mongodb+srv://tara-dehdari:<password>@cluster0.80wjx.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-  }
-);
+mongoose.connect("process.env.MONGODB_URI,", {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+});
 
 // routes
 app.use(require("./routes/api.js"));
