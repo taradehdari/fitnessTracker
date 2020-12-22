@@ -9,6 +9,10 @@ Using MongoDB I created a Fitness Tracker Application. You can store and track y
 - mongoose
 - morgan
 
+## Deployed Application
+
+https://fitness-app-2020.herokuapp.com/
+
 ## Demonstration
 
 ![Fitness App](/fitnessdemo.gif)
